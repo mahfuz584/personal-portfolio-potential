@@ -27,7 +27,7 @@ const Services = () => {
         />
         <motion.div
           ref={ref}
-          className="grid grid-cols-4 gap-x-5 mt-"
+          className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 "
           variants={staggerContainer}
           initial="hidden"
           animate={controls}

@@ -4,7 +4,7 @@ export const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      ease: [0.25, 0.1, 0.25, 1], // Smooth parent animation
+      ease: [0.25, 0.1, 0.25, 1],
       duration: 0.8,
     },
   },
