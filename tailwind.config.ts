@@ -11,6 +11,7 @@ export default {
       colors: {
         brandColor: "#FD6F00",
         bgGray: "#EDECEC",
+        bgSemiGray: "#F8F8F8",
         bgDark: "#1E1E1E",
         bgLight: "#fff",
       },
@@ -29,7 +30,7 @@ export default {
 
       screens: {
         xs: "640px",
-        sm: "768px",
+        sm: "700px",
         md: "1024px",
         lg: "1280px",
         xl: "1440px",
