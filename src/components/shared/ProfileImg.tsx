@@ -8,15 +8,15 @@ const ProfileImg = ({
   className?: string;
 }) => {
   return (
-    <div>
+    <>
       <Image
         src={src}
         alt="hero"
         width={1000}
         height={1000}
-        className={`size-full object-cover  ${className}`}
+        className={`size-full object-cover  ${className} mx-auto`}
       />
-    </div>
+    </>
   );
 };
 

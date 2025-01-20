@@ -4,15 +4,15 @@ import Container from "../ui/container";
 
 const About = () => {
   return (
-    <Container className="lg:mt-24 mt-12">
+    <Container id="about" className="lg:mt-24 mt-12">
       <div className="grid grid-cols-12 gap-y-8 items-center">
-        <div className="sm:col-span-6 col-span-12  col-start-1 ">
+        <div className="md:col-span-6 col-span-12  col-start-1 ">
           <ProfileImg
             className="lg:-ml-[3rem]"
             src="/images/hero-about/about.png"
           />
         </div>
-        <div className="sm:col-span-6 col-span-12">
+        <div className="md:col-span-6 col-span-12">
           <p className="lg:text-text-4xl sm:text-text-4xl text-text-3xl font-[600]">
             About Me
           </p>

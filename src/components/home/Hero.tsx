@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <Container className="mt-12">
       <div className="grid grid-cols-12 gap-y-8 items-center">
-        <div className="sm:col-span-6 col-span-12 col-start-1 md:order-1 order-2">
+        <div className="md:col-span-6 col-span-12 col-start-1 md:order-1 order-2">
           <p className="text-text-xl font-[600]">Hi I Am</p>
           <p className="text-text-2xl text-brandColor font-[600]">
             Muhammad Umair
@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
           <CustomBtn className="mt-6">Hire Me</CustomBtn>
         </div>
-        <div className="sm:col-span-5 col-span-10 mx-auto md:col-start-8 col-start-2 order-1 md:order-2">
+        <div className="sm:col-span-12 col-span-10 mx-auto md:col-start-8 col-start-2 order-1 md:order-2">
           <ProfileImg
             className="ml-[.65rem]"
             src="/images/hero-about/hero.png"

@@ -12,7 +12,9 @@ export default {
         brandColor: "#FD6F00",
         bgGray: "#EDECEC",
         bgSemiGray: "#F8F8F8",
+        bgDarkGray: "#545454",
         bgDark: "#1E1E1E",
+        bgDeepDark: "#121212",
         bgLight: "#fff",
       },
       fontSize: {

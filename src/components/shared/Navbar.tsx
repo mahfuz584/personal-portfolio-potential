@@ -14,7 +14,7 @@ const Navbar = () => {
     <Container className="flex justify-between py-8 sm:px-0 px-2">
       <div className="flex items-center sm:gap-x-3 gap-x-1">
         <Image
-          src="/shared/brandLogo.png"
+          src="/images/shared/brandLogo.png"
           alt="brand-logo"
           height={1000}
           width={1000}
@@ -29,7 +29,9 @@ const Navbar = () => {
           {navItems?.map(({ name, href }, idx) => {
             return (
               <Link href={href} key={idx}>
-                <p className="lg:text-lg md:text-text-md">{name}</p>
+                <p className="lg:text-lg md:text-text-md hover:border-b-[#FD6F00] border-b-2 border-transparent cursor-pointer">
+                  {name}
+                </p>
               </Link>
             );
           })}
@@ -83,7 +85,7 @@ const Navbar = () => {
                 {navItems.map(({ name, href }, idx) => (
                   <Link href={href} key={idx}>
                     <p
-                      className="text-lg font-medium text-gray-800 dark:text-gray-200"
+                      className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:border-b-[#FD6F00] border-b-2 border-transparent cursor-pointer"
                       onClick={() => setIsOpen(false)}
                     >
                       {name}

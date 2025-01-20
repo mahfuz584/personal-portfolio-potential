@@ -11,11 +11,11 @@ const Projects = () => {
   const [ref, inView] = useInView({ threshold: 0.2 });
 
   return (
-    <Container>
+    <Container id="projects">
       <div ref={ref}>
         <div>
           <DynamicTitle
-            heading="Services"
+            heading="Projects"
             subHeading="UX, web, app, and graphic design solutions. Creating seamless experiences and visually stunning designs tailored for impact."
           />
         </div>

@@ -4,7 +4,7 @@ import TestimonialList from "./TestimonialList";
 
 const Testimonial = () => {
   return (
-    <div>
+    <div id="testimonials">
       <Container>
         <DynamicTitle
           heading="Testimonials"

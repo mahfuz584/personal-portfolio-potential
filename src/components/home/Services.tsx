@@ -19,7 +19,7 @@ const Services = () => {
     }
   }, [inView, controls]);
   return (
-    <Container>
+    <Container id="services">
       <div className="lg:mt-24 mt-12">
         <DynamicTitle
           heading="Services"

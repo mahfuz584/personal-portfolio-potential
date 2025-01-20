@@ -5,22 +5,22 @@ export const navItems = [
   },
   {
     name: "About Me",
-    href: "/about",
+    href: "/#about",
   },
   {
     name: "Services",
-    href: "/services",
+    href: "/#services",
   },
   {
     name: "Projects",
-    href: "/projects",
+    href: "/#projects",
   },
   {
     name: "Testimonials",
-    href: "/testimonials",
+    href: "/#testimonials",
   },
   {
     name: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ];

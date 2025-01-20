@@ -1,4 +1,5 @@
 import About from "@/components/home/About";
+import ContactMe from "@/components/home/ContactMe";
 import Hero from "@/components/home/Hero";
 import Projects from "@/components/home/Projects/Projects";
 import Services from "@/components/home/Services";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Services />
       <Projects />
       <Testimonial />
+      <ContactMe />
     </>
   );
 };
