@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Container className="flex justify-between py-8 sm:px-0 px-2">
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center sm:gap-x-3 gap-x-1">
         <Image
           src="/shared/brandLogo.png"
           alt="brand-logo"
@@ -24,7 +24,7 @@ const Navbar = () => {
           <span className="font-[700]">M</span>umair
         </p>
       </div>
-      <div className="flex justify-center items-center lg:gap-x-8 md:gap-x-6">
+      <div className="flex justify-center items-center lg:gap-x-8 gap-x-6">
         <div className="lg:flex hidden items-center gap-x-8">
           {navItems?.map(({ name, href }, idx) => {
             return (
@@ -34,19 +34,19 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div className="flex items-center sm:gap-x-5 gap-x-2">
-          <CustomBtn>Download CV</CustomBtn>
-          <ThemeToggle />
+        <div className="flex items-center gap-x-5 ">
+          <CustomBtn className="hidden lg:flex ">Download CV</CustomBtn>
+          <ThemeToggle className="z-10" />
         </div>
         <div
-          className={`lg:hidden flex items-center justify-center  w-fit sm:-mr-3 -mr-[.9rem] z-10`}
+          className={`lg:hidden flex items-center justify-center  w-fit z-10 bg-brandColor rounded-full`}
         >
           {/* hamburger menu */}
           <Hamburger
             toggle={setIsOpen}
-            color="#FD6F00"
+            color="#000"
             toggled={isOpen}
-            size={20}
+            size={18}
           />
         </div>
       </div>

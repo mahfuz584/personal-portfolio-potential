@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
-const ThemeToggle = () => {
+const ThemeToggle = ({ className }: { className?: string }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className=""
+      className={`${className}`}
     >
       {theme === "dark" ? (
         <MdOutlineLightMode size={22} color="#FD6F00" />
