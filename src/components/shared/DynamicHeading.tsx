@@ -10,7 +10,9 @@ const DynamicTitle: React.FC<TDynamicHeading> = ({ heading, subHeading }) => {
       <p className="lg:text-text-4xl sm:text-text-4xl text-text-3xl font-[600] text-center">
         {heading}
       </p>
-      <p className="text-text-lg text-center">{subHeading}</p>
+      <p className="md:text-text-lg sm:text-text-md text-center">
+        {subHeading}
+      </p>
     </div>
   );
 };
