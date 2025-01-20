@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-const ProfileImg = ({ src }: { src: string }) => {
+const ProfileImg = ({
+  src,
+  className,
+}: {
+  src: string;
+  className?: string;
+}) => {
   return (
     <div>
       <Image
@@ -8,7 +14,7 @@ const ProfileImg = ({ src }: { src: string }) => {
         alt="hero"
         width={1000}
         height={1000}
-        className="size-full object-cover ml-[.65rem]"
+        className={`size-full object-cover  ${className}`}
       />
     </div>
   );

@@ -28,8 +28,11 @@ const Hero = () => {
           </p>
           <CustomBtn className="mt-6">Hire Me</CustomBtn>
         </div>
-        <div className="sm:col-span-5 col-span-12 md:col-start-8 col-start-1 order-1 md:order-2">
-          <ProfileImg src="/images/hero-about/hero.png" />
+        <div className="sm:col-span-5 col-span-10 mx-auto md:col-start-8 col-start-2 order-1 md:order-2">
+          <ProfileImg
+            className="ml-[.65rem]"
+            src="/images/hero-about/hero.png"
+          />
         </div>
       </div>
     </Container>

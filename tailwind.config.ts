@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         brandColor: "#FD6F00",
+        bgGray: "#EDECEC",
         bgDark: "#1E1E1E",
         bgLight: "#fff",
       },
