@@ -6,10 +6,15 @@ import Hamburger from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import CustomBtn from "../ui/button";
 import Container from "../ui/container";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -40,9 +45,21 @@ const Navbar = () => {
           {navItems?.map(({ name, href }, idx) => {
             return (
               <Link href={href} key={idx}>
-                <p className="lg:text-lg md:text-text-md hover:border-b-[#FD6F00] border-b-2 border-transparent cursor-pointer">
+                <motion.p
+                  ref={ref}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: inView ? 1 : 0,
+                    y: inView ? 0 : 20,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    delay: idx * 0.1,
+                  }}
+                  className="lg:text-lg md:text-text-md hover:border-b-[#FD6F00] border-b-2 border-transparent cursor-pointer"
+                >
                   {name}
-                </p>
+                </motion.p>
               </Link>
             );
           })}
@@ -97,12 +114,22 @@ const Navbar = () => {
                 {/* Drawer Navigation */}
                 {navItems.map(({ name, href }, idx) => (
                   <Link href={href} key={idx}>
-                    <p
+                    <motion.p
+                      ref={ref}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{
+                        opacity: inView ? 1 : 0,
+                        y: inView ? 0 : 20,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        delay: idx * 0.1,
+                      }}
                       className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:border-b-[#FD6F00] border-b-2 border-transparent cursor-pointer"
                       onClick={() => setIsOpen(false)}
                     >
                       {name}
-                    </p>
+                    </motion.p>
                   </Link>
                 ))}
                 <CustomBtn className="text-white">Download CV</CustomBtn>
