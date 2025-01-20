@@ -1,4 +1,5 @@
 import ProfileImg from "../shared/ProfileImg";
+import SocialInfo from "../shared/SocialInfo";
 import CustomBtn from "../ui/button";
 import Container from "../ui/container";
 
@@ -26,13 +27,14 @@ const Hero = () => {
             intuitive designs and efficient, scalable solutions that enhance
             user experiences
           </p>
-          <CustomBtn className="mt-6">Hire Me</CustomBtn>
+          <CustomBtn className="mt-6 text-white">Hire Me</CustomBtn>
         </div>
         <div className="sm:col-span-12 col-span-10 mx-auto md:col-start-8 col-start-2 order-1 md:order-2">
           <ProfileImg
             className="ml-[.65rem]"
             src="/images/hero-about/hero.png"
           />
+          <SocialInfo />
         </div>
       </div>
     </Container>

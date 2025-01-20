@@ -49,7 +49,7 @@ const Services = () => {
                   alt={title}
                   width={1000}
                   height={1000}
-                  className="rounded-md" // Rounded corners for images
+                  className="rounded-md"
                 />
                 <div className="flex flex-col items-start space-y-2">
                   <p className="lg:text-text-2xl sm:text-text-md text-text-md font-[600] dark:text-black">

@@ -5,11 +5,22 @@ import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CustomBtn from "../ui/button";
 import Container from "../ui/container";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
   return (
     <Container className="flex justify-between py-8 sm:px-0 px-2">
       <div className="flex items-center sm:gap-x-3 gap-x-1">
@@ -18,9 +29,9 @@ const Navbar = () => {
           alt="brand-logo"
           height={1000}
           width={1000}
-          className="md:w-10 w-6 md:h-10 h-6 object-cover"
+          className="w-10 h-10 object-cover"
         />
-        <p className="md:text-text-3xl sm:text-text-2xl text-text-md">
+        <p className="md:text-text-3xl text-text-2xl ">
           <span className="font-[700]">M</span>umair
         </p>
       </div>
@@ -37,7 +48,9 @@ const Navbar = () => {
           })}
         </div>
         <div className="flex items-center gap-x-5 ">
-          <CustomBtn className="hidden lg:flex ">Download CV</CustomBtn>
+          <CustomBtn className="hidden lg:flex text-white">
+            Download CV
+          </CustomBtn>
           <ThemeToggle className="z-10" />
         </div>
         <div
@@ -64,7 +77,7 @@ const Navbar = () => {
             />
 
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm"
+              className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm overflow-hidden"
               onClick={() => setIsOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -92,6 +105,7 @@ const Navbar = () => {
                     </p>
                   </Link>
                 ))}
+                <CustomBtn className="text-white">Download CV</CustomBtn>
               </div>
             </motion.div>
           </div>

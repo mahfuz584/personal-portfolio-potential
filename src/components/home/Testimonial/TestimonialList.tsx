@@ -50,7 +50,7 @@ const TestimonialList = () => {
       >
         {testimonials?.map(({ image, message, name, company }, idx) => (
           <SwiperSlide key={idx}>
-            <div className=" h-auto bg-bgGray md:p-8 p-6 rounded-lg shadow-lg flex flex-col md:flex-row  items-center gap-8">
+            <div className="h-auto bg-bgSemiGray md:p-8 p-6 rounded-lg shadow-lg flex flex-col md:flex-row  items-center gap-8">
               <Image
                 src={image}
                 alt="Testimonial"

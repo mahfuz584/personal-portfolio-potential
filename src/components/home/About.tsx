@@ -1,8 +1,14 @@
+"use client";
 import { skills } from "@/data/skills";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ProfileImg from "../shared/ProfileImg";
 import Container from "../ui/container";
-
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
   return (
     <Container id="about" className="lg:mt-24 mt-12">
       <div className="grid grid-cols-12 gap-y-8 items-center">
@@ -23,7 +29,20 @@ const About = () => {
           </p>
           <div className="md:space-y-6 space-y-4 relative mt-6">
             {skills.map((skill, idx) => (
-              <div key={idx} className="relative">
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: inView ? 1 : 0,
+                  y: inView ? 0 : 20,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: idx * 0.2,
+                }}
+                key={idx}
+                className="relative"
+              >
                 <div className="flex justify-between items-center mb-2">
                   <span className="lg:text-text-xl md:text-text-lg sm:text-text-md font-[600]">
                     {skill.name}
@@ -40,7 +59,7 @@ const About = () => {
                     style={{ left: `calc(${skill.level}% - 10px)` }}
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

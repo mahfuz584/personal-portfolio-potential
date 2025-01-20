@@ -20,7 +20,7 @@ const ContactMe = () => {
           className="sm:w-[627px]  w-[320px] sm:h-[54px] h-[40px] rounde-md bg-bgGray dark:text-[#797979] text-text-lg dark:text-text-dark px-4"
           placeholder="Enter your email"
         />
-        <CustomBtn>Contact Me</CustomBtn>
+        <CustomBtn className="text-white">Contact Me</CustomBtn>
       </div>
     </Container>
   );
